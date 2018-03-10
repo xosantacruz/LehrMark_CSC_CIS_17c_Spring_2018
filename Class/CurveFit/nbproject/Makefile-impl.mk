@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=Matrix_Inversion
+PROJECTNAME=CurveFit
 
 # Active Configuration
 DEFAULTCONF=Debug

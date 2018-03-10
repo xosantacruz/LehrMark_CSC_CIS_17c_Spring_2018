@@ -9,19 +9,19 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=Cygwin-Windows
 CND_ARTIFACT_DIR_Debug=dist/Debug/Cygwin-Windows
-CND_ARTIFACT_NAME_Debug=matrix_inversion
-CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin-Windows/matrix_inversion
+CND_ARTIFACT_NAME_Debug=curvefit
+CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin-Windows/curvefit
 CND_PACKAGE_DIR_Debug=dist/Debug/Cygwin-Windows/package
-CND_PACKAGE_NAME_Debug=matrixinversion.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin-Windows/package/matrixinversion.tar
+CND_PACKAGE_NAME_Debug=curvefit.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin-Windows/package/curvefit.tar
 # Release configuration
 CND_PLATFORM_Release=Cygwin-Windows
 CND_ARTIFACT_DIR_Release=dist/Release/Cygwin-Windows
-CND_ARTIFACT_NAME_Release=matrix_inversion
-CND_ARTIFACT_PATH_Release=dist/Release/Cygwin-Windows/matrix_inversion
+CND_ARTIFACT_NAME_Release=curvefit
+CND_ARTIFACT_PATH_Release=dist/Release/Cygwin-Windows/curvefit
 CND_PACKAGE_DIR_Release=dist/Release/Cygwin-Windows/package
-CND_PACKAGE_NAME_Release=matrixinversion.tar
-CND_PACKAGE_PATH_Release=dist/Release/Cygwin-Windows/package/matrixinversion.tar
+CND_PACKAGE_NAME_Release=curvefit.tar
+CND_PACKAGE_PATH_Release=dist/Release/Cygwin-Windows/package/curvefit.tar
 #
 # include compiler specific variables
 #
