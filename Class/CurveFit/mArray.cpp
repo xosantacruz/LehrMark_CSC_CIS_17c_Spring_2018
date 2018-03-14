@@ -105,7 +105,14 @@ mArray::mArray(bool z,const mArray &d,int rb,int re,int cb,int ce){
         }
     }
 }
-
+//Copy constructor using array limits
+//Also takes the transpose simultaneously
+//z==> false take the transpose
+//[rb,re]==>Span for rows
+//[cb,ce]==>Span for cols
+mArray::mArray(bool z,const mArray &d){
+    mArray(z,d,0,d.getRows()-1,0,d.getCols()-1);
+}
 //Destructor
 mArray::~mArray(){
     //Delete the columns in all the rows

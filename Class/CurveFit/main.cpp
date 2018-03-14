@@ -18,18 +18,18 @@ using namespace std;
 //Execution begins here
 int main(){
     //Declare the Row and Empirical Data files
-    char fn_r[]="r.dat";
-    mArray r(fn_r);
-    char fn_f[]="f.dat";
-    mArray f(fn_f);
+    char fn_r[]="r.dat";//r file name
+    mArray r(fn_r);     //Independent variable, form of the equation
+    char fn_f[]="f.dat";//f file name
+    mArray f(fn_f);     //Dependent variable, from empirical data run
     
     //Make the Sum of Squares Calculation c=(rt*r)^-1
-    mArray rt(false,r,0,r.getRows()-1,0,r.getCols()-1);
-    mArray c=mArray::invMat(rt*r)*rt*f;
+    mArray rt(false,r); //Transpose of independent variable
+    mArray c=mArray::invMat(rt*r)*rt*f;//Coefficient least squares solution
     
     //Output the results
-    char fn_c[]="c.dat";
-    c.mPrint(fn_c);
+    char fn_c[]="c.dat";//c file name
+    c.mPrint(fn_c);     //Where curve fit coefficients are printed
     
     return 0;
 }

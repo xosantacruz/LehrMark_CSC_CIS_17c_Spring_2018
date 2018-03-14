@@ -22,6 +22,7 @@ class mArray
 		mArray(int,int);
 		mArray(const mArray &);
 		mArray(bool,const mArray &,int,int,int,int);
+                mArray(bool,const mArray &);
 		~mArray();
 		mArray operator+(const mArray &);
 		mArray operator-(const mArray &);
@@ -31,9 +32,9 @@ class mArray
                 static mArray invMat(mArray);
 		int *sort(int);
 		void mPrint(char *);
-		int getRows(){return Rows;};
-		int getCols(){return Cols;};
-		double getData(int r,int c){return Data[r][c];};
+		int getRows()const {return Rows;};
+		int getCols()const {return Cols;};
+		double getData(int r,int c)const {return Data[r][c];};
 		void setData(double a,int r,int c){Data[r][c]=a;};
 };
 
