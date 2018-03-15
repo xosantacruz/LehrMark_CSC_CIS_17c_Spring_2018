@@ -25,7 +25,7 @@ int main(){
     
     //Make the Sum of Squares Calculation c=(rt*r)^-1
     mArray rt(false,r); //Transpose of independent variable
-    mArray c=mArray::invMat(rt*r)*rt*f;//Coefficient least squares solution
+    mArray c=mArray::invMat(rt*r)*rt*f;
     
     //Output the results
     char fn_c[]="c.dat";//c file name

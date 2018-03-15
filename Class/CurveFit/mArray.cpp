@@ -111,7 +111,35 @@ mArray::mArray(bool z,const mArray &d,int rb,int re,int cb,int ce){
 //[rb,re]==>Span for rows
 //[cb,ce]==>Span for cols
 mArray::mArray(bool z,const mArray &d){
-    mArray(z,d,0,d.getRows()-1,0,d.getCols()-1);
+    int rb=0;
+    int re=d.getRows()-1;
+    int cb=0;
+    int ce=d.getCols()-1;
+    if(z){
+        Rows=re-rb+1;
+        Cols=ce-cb+1;
+        Data=new double*[Rows];
+        for(int r=0;r<Rows;r++){
+            Data[r]=new double[Cols];
+        }
+        for(int r=0;r<Rows;r++){
+            for(int c=0;c<Cols;c++){
+                Data[r][c]=d.Data[rb+r][cb+c];
+            }
+        }
+    }else{//with Transpose
+        Cols=re-rb+1;
+        Rows=ce-cb+1;
+        Data=new double*[Rows];
+        for(int r=0;r<Rows;r++){
+            Data[r]=new double[Cols];
+        }
+        for(int r=0;r<Rows;r++){
+            for(int c=0;c<Cols;c++){
+                Data[r][c]=d.Data[rb+c][cb+r];
+            }
+        }
+    }
 }
 //Destructor
 mArray::~mArray(){
@@ -194,7 +222,7 @@ mArray mArray::logsig(const mArray &a){
     return temp;
 }
 
-mArray mArray::invMat(mArray m){
+mArray mArray::invMat(const mArray &m){
     //Allocate memory for the partitioned matrix and the inverse matrix
     mArray a(m.Rows,2*m.Cols);
     mArray mInv(m.Rows,m.Cols);

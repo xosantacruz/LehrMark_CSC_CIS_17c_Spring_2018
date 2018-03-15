@@ -29,7 +29,7 @@ class mArray
 		mArray operator*(const mArray &);
 		mArray operator=(const mArray &);
 		static mArray logsig(const mArray &);
-                static mArray invMat(mArray);
+                static mArray invMat(const mArray &);
 		int *sort(int);
 		void mPrint(char *);
 		int getRows()const {return Rows;};
